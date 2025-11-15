@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>День рождения</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="calendar.css">
+    <link rel="stylesheet" href="details.css">
+    <link rel="stylesheet" href="invitation.css">
+    <link rel="stylesheet" href="time.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Inter:wght@300;400;500;600;700&family=Dancing+Script:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- 1. Главное изображение с букетом -->
+    <section class="hero-section">
+        <div class="hero-image-wrapper">
+            <img src="images/hero-image.jpg" alt="Meruyert's birthday" class="hero-image">
+            <div class="hero-overlay">
+                <div class="hero-text-small">18'S BIRTHDAY</div>
+                <div class="hero-text-large">Daria's birthday</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Стрелка между фотографиями -->
+    <div class="arrow-between-photos">
+        <a href="#calendar" class="scroll-arrow-between">
+            <svg width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6"/>
+            </svg>
+        </a>
+    </div>
+
+    <!-- 2. Фото в ресторане -->
+    <section id="restaurant" class="photo-section photo-section-spaced">
+        <img src="images/restaurant-photo.jpg" alt="Photo" class="restaurant-photo">
+    </section>
+
+    <!-- 3. Текст с приглашением -->
+    <section id="invitation" class="invitation-section">
+        <h1 class="invitation-title">Birthday party!!!</h1>
+        
+        <div class="hearts-row">
+            <span class="heart-emoji">❤️</span>
+            <span class="heart-emoji">❤️</span>
+            <span class="heart-emoji">❤️</span>
+            <span class="heart-emoji">❤️</span>
+        </div>
+
+        <div class="separator-line"></div>
+
+        <div class="invitation-text">
+            <p>Приглашаю Вас на свой день рождения. Ведь именно с Вами мой праздник будет ярким, весёлым, интересным.</p>
+            <p>Отказы не принимаются. Форс-мажорные обстоятельства не допускаются.</p>
+            <p>Вы — мой желанный гость. Жду Вас без опозданий и с хорошим настроением ❤️</p>
+        </div>
+    </section>
+
+    <!-- 4. Дата (календарь) -->
+    <section id="calendar" class="calendar-container">
+        <!-- Декоративные элементы сверху -->
+        <div class="decorative-diamonds">
+            <span class="diamond"></span>
+            <span class="diamond"></span>
+            <span class="diamond"></span>
+        </div>
+
+        <!-- Месяц и год -->
+        <h1 class="month-name">December</h1>
+        <h2 class="year">2025</h2>
+
+        <!-- Календарь -->
+        <div class="calendar-grid">
+            <div class="day-header">M</div>
+            <div class="day-header">T</div>
+            <div class="day-header">W</div>
+            <div class="day-header">T</div>
+            <div class="day-header">F</div>
+            <div class="day-header">S</div>
+            <div class="day-header">S</div>
+
+            <!-- 1 декабря 2025 - понедельник -->
+            <div class="day">1</div>
+            <div class="day">2</div>
+            <div class="day">3</div>
+            <div class="day">4</div>
+            <div class="day">5</div>
+            <div class="day">6</div>
+            <div class="day sunday">7</div>
+            <div class="day">8</div>
+            <div class="day">9</div>
+            <div class="day">10</div>
+            <div class="day">11</div>
+            <div class="day">12</div>
+            <div class="day">13</div>
+            <div class="day sunday">14</div>
+            <div class="day">15</div>
+            <div class="day special">
+                16
+                <img src="images/heart-decoration.png" alt="Heart" class="heart-small">
+            </div>
+            <div class="day">17</div>
+            <div class="day">18</div>
+            <div class="day">19</div>
+            <div class="day">20</div>
+            <div class="day sunday">21</div>
+            <div class="day">22</div>
+            <div class="day">23</div>
+            <div class="day">24</div>
+            <div class="day">25</div>
+            <div class="day">26</div>
+            <div class="day">27</div>
+            <div class="day sunday">28</div>
+            <div class="day">29</div>
+            <div class="day">30</div>
+            <div class="day">31</div>
+        </div>
+    </section>
+
+    <!-- 5. Время -->
+    <section id="time" class="time-section">
+        <!-- Иконка времени -->
+        <div class="time-icon">
+            <img src="images/time-icon.png" alt="Time icon" class="icon-image">
+        </div>
+
+        <!-- Текст "Время" -->
+        <h2 class="section-title">Время</h2>
+
+        <!-- Время события -->
+        <div class="time-value">18:00</div>
+    </section>
+
+    <!-- 6. Место -->
+    <section id="location" class="location-section-standalone">
+        <div class="location-icon">
+            <img src="images/location-icon.png" alt="Location icon" class="icon-image">
+        </div>
+        <h2 class="section-title">Место</h2>
+        <div class="location-details">
+            <div class="location-name">Кафе-Бар Верона</div>
+            <a href="https://2gis.ru/ru_irkutsk_oblast_west_part_district/geo/70000001055562745" class="location-link" target="_blank">Найти</a>
+        </div>
+    </section>
+
+</body>
+</html>

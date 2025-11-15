@@ -1,0 +1,213 @@
+/* Стили для страницы календаря */
+.calendar-container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 30px 20px;
+    text-align: center;
+    position: relative;
+    width: 100%;
+    min-height: auto;
+}
+
+/* Декоративные ромбы */
+.decorative-diamonds {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 20px;
+}
+
+.diamond {
+    width: 8px;
+    height: 8px;
+    background-color: #2c2c2c;
+    transform: rotate(45deg);
+    display: inline-block;
+}
+
+/* Месяц */
+.month-name {
+    font-family: 'Dancing Script', cursive;
+    font-size: 48px;
+    font-weight: 400;
+    color: #2c2c2c;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+
+/* Год */
+.year {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    font-weight: 300;
+    color: #2c2c2c;
+    margin-bottom: 30px;
+}
+
+/* Сетка календаря */
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 8px;
+    margin-bottom: 20px;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.day-header {
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #2c2c2c;
+    padding: 10px;
+}
+
+.day {
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+    color: #2c2c2c;
+    padding: 12px;
+    position: relative;
+}
+
+.day.empty {
+    visibility: hidden;
+}
+
+.day.sunday {
+    color: #d32f2f;
+    font-weight: 500;
+}
+
+.day.special {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.heart-small {
+    position: absolute;
+    width: 55px;
+    height: 55px;
+    object-fit: contain;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    opacity: 0.8;
+}
+
+/* Кнопка вниз в календаре */
+.calendar-arrow {
+    position: relative;
+    margin-top: 40px;
+    color: #2c2c2c;
+    text-decoration: none;
+    animation: bounce-calendar 2s infinite;
+}
+
+.calendar-arrow:hover {
+    opacity: 0.7;
+}
+
+@keyframes bounce-calendar {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(10px);
+    }
+}
+
+/* Адаптивность */
+@media (max-width: 1024px) {
+    .calendar-container {
+        padding: 30px 20px;
+    }
+    
+    .month-name {
+        font-size: 42px;
+    }
+    
+    .heart-small {
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media (max-width: 768px) {
+    .calendar-container {
+        padding: 20px 15px;
+    }
+    
+    .month-name {
+        font-size: 36px;
+    }
+    
+    .year {
+        font-size: 20px;
+    }
+    
+    .calendar-grid {
+        gap: 4px;
+        max-width: 100%;
+    }
+    
+    .day {
+        padding: 8px 4px;
+        font-size: 14px;
+    }
+    
+    .day-header {
+        font-size: 12px;
+        padding: 8px 4px;
+    }
+    
+    .decorative-diamonds {
+        margin-bottom: 15px;
+    }
+    
+    .heart-small {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+@media (max-width: 480px) {
+    .calendar-container {
+        padding: 15px 10px;
+    }
+    
+    .month-name {
+        font-size: 28px;
+        margin-bottom: 8px;
+    }
+    
+    .year {
+        font-size: 18px;
+        margin-bottom: 20px;
+    }
+    
+    .calendar-grid {
+        gap: 2px;
+    }
+    
+    .day {
+        padding: 6px 2px;
+        font-size: 12px;
+    }
+    
+    .day-header {
+        font-size: 11px;
+        padding: 6px 2px;
+    }
+    
+    .heart-small {
+        width: 41px;
+        height: 41px;
+    }
+}
+
